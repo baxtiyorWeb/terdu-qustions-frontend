@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const API_BASE_URL = "http://localhost:3000";
+  const API_BASE_URL = "https://terdu-qustions-2t6dw6oan.vercel.app";
   const currentPath = window.location.pathname;
   const token = localStorage.getItem("teacher_access_token"); // -------------------------------------- // YANGI: TOAST FUNKSIYASI // --------------------------------------
   function showToast(message, type = "default", duration = 3000) {
