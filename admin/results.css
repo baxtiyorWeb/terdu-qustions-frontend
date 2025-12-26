@@ -1,0 +1,196 @@
+/* results.css – Chiroyli va zamonaviy dizayn */
+
+.admin-body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-header {
+  background: linear-gradient(135deg, #1e9cfd, #1a7bd8);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.admin-header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.admin-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.admin-nav li {
+  margin: 0;
+}
+
+.admin-nav a {
+  display: block;
+  padding: 18px 24px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.admin-nav a:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.admin-nav a.active {
+  background: rgba(255,255,255,0.2);
+  font-weight: bold;
+}
+
+.admin-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h2 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.results-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: #1e9cfd;
+}
+
+.loading i {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.no-results {
+  text-align: center;
+  padding: 80px 20px;
+  color: #7f8c8d;
+}
+
+.no-results i {
+  font-size: 5rem;
+  color: #bdc3c7;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.results-table th {
+  background: #1e9cfd;
+  color: white;
+  padding: 16px 12px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.results-table td {
+  padding: 16px 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.results-table tr:hover {
+  background-color: #f8fbff;
+}
+
+.results-table tr:last-child td {
+  border-bottom: none;
+}
+
+.score-good {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+.score-medium {
+  color: #f39c12;
+  font-weight: bold;
+}
+
+.score-bad {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.details-btn {
+  padding: 8px 16px;
+  background: #1e9cfd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.details-btn:hover {
+  background: #1a7bd8;
+  transform: translateY(-2px);
+}
+
+.details-btn i {
+  margin-right: 6px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-nav ul {
+    flex-direction: column;
+  }
+  
+  .admin-nav a {
+    padding: 14px 20px;
+  }
+  
+  .results-table th,
+  .results-table td {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Toast xabarlar */
+#toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+

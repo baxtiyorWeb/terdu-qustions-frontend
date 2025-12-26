@@ -1,0 +1,363 @@
+/* categories.css – Universitet darajasidagi chiroyli dizayn */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f8fc 0%, #e8f0fe 100%);
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #1e9cfd, #1a7bd8);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+}
+
+.navbar a.active {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+/* Main Content */
+.main-content {
+  padding: 60px 0;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #1e9cfd;
+  margin-bottom: 60px;
+  font-weight: 700;
+}
+
+/* Card */
+.card {
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-header {
+  background: linear-gradient(135deg, #1e9cfd, #1a7bd8);
+  color: white;
+  padding: 25px;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.card-header i {
+  font-size: 2rem;
+  margin-right: 15px;
+}
+
+.card-header h2 {
+  display: inline-block;
+  font-weight: 600;
+}
+
+/* Form */
+.form-card .card-header {
+  background: linear-gradient(135deg, #4caf50, #388e3c);
+}
+
+.form-group {
+  margin: 30px 40px;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 18px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 16px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #1e9cfd;
+  box-shadow: 0 0 0 5px rgba(30, 156, 253, 0.2);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 40px 40px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 36px;
+  border: none;
+  border-radius: 16px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 160px;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #1e9cfd, #1a7bd8);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(30, 156, 253, 0.3);
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+  transform: translateY(-4px);
+}
+
+/* Message */
+.message-area {
+  margin: 20px 40px 0;
+  padding: 15px;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+.message-area.success {
+  background: #d4edda;
+  color: #155724;
+  border: 2px solid #c3e6cb;
+}
+
+.message-area.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 2px solid #f5c6cb;
+}
+
+/* Table */
+.table-wrapper {
+  padding: 30px 40px;
+}
+
+.categories-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+}
+
+.categories-table th {
+  background: linear-gradient(135deg, #1e9cfd, #1a7bd8);
+  color: white;
+  padding: 20px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.categories-table th:first-child {
+  border-radius: 20px 0 0 20px;
+}
+
+.categories-table th:last-child {
+  border-radius: 0 20px 20px 0;
+}
+
+.categories-table td {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.categories-table tr td:first-child {
+  border-radius: 20px 0 0 20px;
+  font-weight: bold;
+  color: #1e9cfd;
+}
+
+.categories-table tr td:last-child {
+  border-radius: 0 20px 20px 0;
+  text-align: center;
+}
+
+.categories-table tr:hover td {
+  background: #f8fbff;
+  transform: scale(1.01);
+  transition: all 0.3s;
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn-sm {
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 1rem;
+  min-width: 120px;
+}
+
+.btn-edit {
+  background: linear-gradient(135deg, #28a745, #218838);
+  color: white;
+}
+
+.btn-edit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(40, 167, 69, 0.3);
+}
+
+.btn-delete {
+  background: linear-gradient(135deg, #dc3545, #c82333);
+  color: white;
+}
+
+.btn-delete:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(220, 53, 69, 0.3);
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 100px 40px;
+  color: #777;
+}
+
+.empty-state i {
+  font-size: 7rem;
+  color: #bdc3c7;
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+.empty-state h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.empty-state p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .page-title {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+  }
+  .navbar a {
+    padding: 16px;
+    justify-content: center;
+  }
+  .form-actions {
+    flex-direction: column;
+  }
+  .btn {
+    width: 100%;
+  }
+  .categories-table th,
+  .categories-table td {
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+  .action-buttons {
+    flex-direction: column;
+  }
+  .btn-sm {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 2rem;
+  }
+  .card-header {
+    padding: 20px;
+  }
+  .card-header h2 {
+    font-size: 1.4rem;
+  }
+  .form-group {
+    margin: 20px;
+  }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talaba Test Tizimi | TermizDU</title>
+    <link rel="stylesheet" href="./test.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="test-container">
+      <div id="auth-modal" class="modal initial-active">
+        <div class="modal-content auth-content">
+          <h2>Kirish (Login)</h2>
+          <p class="auth-subtitle">
+            Test tizimidan foydalanish uchun ism va familiya hamda parolni
+            kiriting.
+          </p>
+          <form id="auth-form">
+            <div class="form-group">
+              <label for="student-username"
+                ><i class="fas fa-user-circle"></i> Ism va familiya</label
+              >
+              <input
+                type="text"
+                id="student-username"
+                placeholder="Masalan: Ali Valiev"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="student-password"
+                ><i class="fas fa-lock"></i> Parol</label
+              >
+              <input
+                type="password"
+                id="student-password"
+                placeholder="Parolni kiriting"
+                required
+              />
+            </div>
+            <button type="submit" class="primary-btn">
+              <i class="fas fa-sign-in-alt"></i> Tizimga kirish
+            </button>
+          </form>
+          <p class="info-text">
+            Ro'yxatdan o'tmagan bo'lsangiz, kirish tugmasini bosganingizda tizim
+            avtomatik ro'yxatdan o'tkazadi.
+          </p>
+        </div>
+      </div>
+
+      <section id="categories-section" class="hidden">
+        <header class="test-header">
+          <h1 id="welcome-message">Xush kelibsiz, Student!</h1>
+          <button id="logout-btn" class="back-btn logout-btn">
+            <i class="fas fa-sign-out-alt"></i> Chiqish
+          </button>
+        </header>
+        <h2 class="section-title">Test mavzusini tanlang va boshlang</h2>
+        <div id="category-list" class="category-grid">
+          </div>
+      </section>
+
+      <section id="test-section" class="hidden">
+        <button id="back-to-categories" class="back-btn">
+          <i class="fas fa-arrow-left"></i> Orqaga (Mavzular)
+        </button>
+
+        <div class="timer-box">
+          <div class="timer-label">Qolgan vaqt:</div>
+          <div class="timer-time" id="time-left">15:00</div>
+        </div>
+        <div class="progress-bar">
+          <div id="progress-indicator"></div>
+        </div>
+
+        <div class="question-card">
+          <div class="question-counter" id="question-counter">1 / 10</div>
+          <h2 class="question-text" id="question-text"></h2>
+
+          <div id="answer-area"></div>
+
+          <div class="navigation">
+            <button id="prev-btn" class="nav-btn">
+              <i class="fas fa-chevron-left"></i> Oldingi
+            </button>
+            <button id="next-btn" class="nav-btn">
+              Keyingi <i class="fas fa-chevron-right"></i>
+            </button>
+            <button id="submit-btn" class="nav-btn submit-btn hidden">
+              <i class="fas fa-check"></i> Testni yakunlash
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div id="result-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2>Test yakunlandi!</h2>
+          <div class="score-big" id="score-text">0 / 0</div>
+          <p class="feedback" id="feedback-text"></p>
+          <p><strong>O'quvchi:</strong> <span id="student-name"></span></p>
+          <div class="score-details" id="score-details"></div>
+          <button id="back-to-categories-btn" class="primary-btn">
+            Yana test tanlash
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./test.js"></script>
+  </body>
+</html>

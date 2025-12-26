@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Savollar | TermizDU Test Tizimi</title>
+    <link rel="stylesheet" href="./admin.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="admin-header">
+      <div class="container">
+        <nav class="admin-nav">
+          <ul>
+            <li>
+              <a href="../admin/admin.html"
+                ><i class="fas fa-home"></i> Bosh sahifa</a
+              >
+            </li>
+            <li>
+              <a href="../admin/categories.html"
+                ><i class="fas fa-list-alt"></i> Kategoriyalar</a
+              >
+            </li>
+            <li>
+              <a href="questions.html" class="active"
+                ><i class="fas fa-question-circle"></i> Savollar</a
+              >
+            </li>
+            <li>
+              <a href="../admin/results.html"
+                ><i class="fas fa-chart-bar"></i> Natijalar</a
+              >
+            </li>
+            <li>
+              <a href="#" id="logoutBtn"
+                ><i class="fas fa-sign-out-alt"></i> Chiqish</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="admin-container">
+      <h2>Savollar Boshqaruvi</h2>
+
+      <!-- Savol qo'shish formasi -->
+      <div class="form-card">
+        <h3>Yangi savol qo'shish</h3>
+        <form id="questionForm">
+          <input type="hidden" id="questionId" />
+
+          <div class="form-group">
+            <label>Kategoriya</label>
+            <select id="categoryId" required></select>
+          </div>
+
+          <div class="form-group">
+            <label>Savol matni</label>
+            <textarea
+              id="questionText"
+              rows="4"
+              required
+              placeholder="Savolni kiriting..."
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Savol turi</label>
+            <select id="questionType" class="question-type-select">
+              <option value="multiple">Variantli savol (A, B, C, D)</option>
+              <option value="text">Matnli javob (o'quvchi yozadi)</option>
+            </select>
+          </div>
+
+          <!-- Variantli savol uchun -->
+          <div id="multipleChoiceSection">
+            <label>Javob variantlari (kamida 2 ta)</label>
+            <div class="options-container">
+              <div class="form-group option-group">
+                <input
+                  type="text"
+                  class="option-input"
+                  placeholder="A) Birinchi variant"
+                />
+              </div>
+              <div class="form-group option-group">
+                <input
+                  type="text"
+                  class="option-input"
+                  placeholder="B) Ikkinchi variant"
+                />
+              </div>
+              <div class="form-group option-group">
+                <input
+                  type="text"
+                  class="option-input"
+                  placeholder="C) Uchinchi variant"
+                />
+              </div>
+              <div class="form-group option-group">
+                <input
+                  type="text"
+                  class="option-input"
+                  placeholder="D) To'rtinchi variant"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>To'g'ri javob indeksi (0=A, 1=B, 2=C, 3=D)</label>
+              <input
+                type="number"
+                id="correctAnswerIndex"
+                min="0"
+                max="3"
+                value="0"
+              />
+            </div>
+          </div>
+
+          <!-- Matnli savol uchun -->
+          <div id="textAnswerSection" class="hidden">
+            <div class="form-group">
+              <label
+                >To'g'ri javob matni (talaba aynan shu matnni yozishi
+                kerak)</label
+              >
+              <input
+                type="text"
+                id="correctTextAnswer"
+                placeholder="Masalan: O'zbekiston poytaxti Toshkent"
+              />
+              <small style="color: #666; display: block; margin-top: 8px">
+                Katta-kichik harflar va bo'shliqlar hisobga olinadi. Tekshirish
+                exact match bo'ladi.
+              </small>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" id="submitBtn" class="btn btn-primary">
+              Qo'shish
+            </button>
+            <button
+              type="button"
+              id="cancelEditBtn"
+              class="btn btn-secondary"
+              style="display: none"
+            >
+              Bekor qilish
+            </button>
+          </div>
+
+          <div id="formMessage" class="message-area"></div>
+        </form>
+      </div>
+
+      <!-- Mavjud savollar jadvali -->
+      <div class="form-card">
+        <h3>Mavjud savollar</h3>
+        <div class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Savol</th>
+                <th>Kategoriya</th>
+                <th>Turi</th>
+                <th>To'g'ri javob</th>
+                <th>Amallar</th>
+              </tr>
+            </thead>
+            <tbody id="questionsTableBody">
+              <tr>
+                <td
+                  colspan="6"
+                  style="text-align: center; padding: 60px; color: #777"
+                >
+                  Yuklanmoqda...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="./admin.js"></script>
+  </body>
+</html>

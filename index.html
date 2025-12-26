@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TermizDU | O'zbek tilining sohada qo'llanilishi</title>
+    <meta
+      name="description"
+      content="Termiz Davlat Universiteti talabalari uchun 'O'zbek tilining sohada qo'llanilishi' fanidan onlayn test tizimi"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>O'qituvchi Kirishi</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="username">Foydalanuvchi nomi</label>
+            <input
+              type="text"
+              id="username"
+              placeholder="Masalan: abbos_muallim"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Parol</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Parolni kiriting"
+              required
+            />
+          </div>
+          <div id="loginMessage" class="message-area"></div>
+          <button type="submit" id="loginSubmitBtn">Kirish</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <ul class="nav-list">
+            <li>
+              <a href="#" class="active"
+                ><i class="fas fa-home"></i> Bosh sahifa</a
+              >
+            </li>
+            <li>
+              <a href="./tests/questions.html"
+                ><i class="fas fa-question-circle"></i> Testlar</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-info-circle"></i> Ma'lumot</a>
+            </li>
+            <li>
+              <a href="#" id="openLoginModal"
+                ><i class="fas fa-sign-in-alt"></i> O'qituvchi kirishi</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <div class="hero-section">
+          <div class="logo-container">
+            <img
+              src="./css/img/logo_tersu.png"
+              alt="Termiz Davlat Universiteti"
+              class="university-logo"
+            />
+          </div>
+          <h1 class="main-title">
+            Termiz Davlat Universiteti talabalari uchun<br />
+            <strong>"O'zbek tilining sohada qo'llanilishi"</strong>
+            fanidan<br />
+            onlayn savollar tizimi
+          </h1>
+        </div>
+
+        <section class="features">
+          <div class="feature-card">
+            <div class="icon-wrapper">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3>Tezkor va qulay</h3>
+            <p>Foydalanuvchilar uchun yuqori optimallashtirilgan interfeys</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon-wrapper">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3>Yetarli vaqt</h3>
+            <p>Har bir test uchun optimal vaqt ajratilgan</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon-wrapper">
+              <i class="fas fa-infinity"></i>
+            </div>
+            <h3>Cheksiz urinishlar</h3>
+            <p>Istagan vaqtingizda qayta topshirishingiz mumkin</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon-wrapper">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>Mobil moslashuv</h3>
+            <p>Barcha qurilmalarda mukammal ishlaydi</p>
+          </div>
+        </section>
+
+        <div class="cta-section">
+          <a href="./tests/index.html" class="cta-button">
+            <i class="fas fa-play-circle"></i>
+            Testni boshlash
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p>
+            © 2025 Termiz Davlat Universiteti | "O'zbek tilining sohada
+            qo'llanilishi" fanidan savollar tizimi
+          </p>
+          <p class="developed-by">
+            DI_K-125 guruhi talabalari tomonidan ishlab chiqildi
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/Toast.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

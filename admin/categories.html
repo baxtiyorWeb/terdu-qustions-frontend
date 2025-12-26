@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kategoriyalar | TermizDU Test Tizimi</title>
+  <link rel="stylesheet" href="./categories.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li><a href="admin.html"><i class="fas fa-home"></i> Bosh sahifa</a></li>
+          <li><a href="categories.html" class="active"><i class="fas fa-list-alt"></i> Kategoriyalar</a></li>
+          <li><a href="questions.html"><i class="fas fa-question-circle"></i> Savollar</a></li>
+          <li><a href="results.html"><i class="fas fa-chart-bar"></i> Natijalar</a></li>
+          <li><a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Chiqish</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      <h1 class="page-title">Kategoriyalar Boshqaruvi</h1>
+
+      <!-- Yangi kategoriya qo'shish formasi -->
+      <div class="card form-card">
+        <div class="card-header">
+          <i class="fas fa-plus-circle"></i>
+          <h2>Yangi kategoriya qo'shish</h2>
+        </div>
+        <form id="categoryForm">
+          <input type="hidden" id="categoryId" />
+          <div class="form-group">
+            <label for="categoryName">
+              <i class="fas fa-tag"></i> Kategoriya nomi
+            </label>
+            <input 
+              type="text" 
+              id="categoryName" 
+              placeholder="Masalan: Amaliyot, Nazariya, Umumiy mavzular..." 
+              required 
+            />
+          </div>
+          <div class="form-actions">
+            <button type="submit" id="submitBtn" class="btn btn-primary">
+              <i class="fas fa-save"></i> Saqlash
+            </button>
+            <button type="button" id="cancelEditBtn" class="btn btn-secondary">
+              <i class="fas fa-times"></i> Bekor qilish
+            </button>
+          </div>
+          <div id="formMessage" class="message-area"></div>
+        </form>
+      </div>
+
+      <!-- Mavjud kategoriyalar -->
+      <div class="card">
+        <div class="card-header">
+          <i class="fas fa-folder-open"></i>
+          <h2>Mavjud kategoriyalar</h2>
+        </div>
+        <div class="table-wrapper">
+          <table class="categories-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Kategoriya nomi</th>
+                <th>Savollar soni</th>
+                <th>Amallar</th>
+              </tr>
+            </thead>
+            <tbody id="categoriesTableBody">
+              <!-- JS orqali to'ldiriladi -->
+
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Bo'sh holat -->
+        <div id="emptyState" class="empty-state">
+          <i class="fas fa-folder-open"></i>
+          <h3>Hozircha kategoriya mavjud emas</h3>
+          <p>Yuqoridagi formadan birinchi kategoriyani qo'shing va testlar uchun mavzular yarating!</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="./admin.js"></script>
+</body>
+</html>

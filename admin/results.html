@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="uz">
+   
+  <head>
+       
+    <meta charset="UTF-8" />
+       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       
+    <title>Natijalar | Universitet Test Tizimi</title>
+       
+    <link rel="stylesheet" href="./admin.css" />
+       
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+     
+  </head>
+   
+  <body>
+    <div id="toast-container"></div>
+    <header class="admin-header">
+      <div class="container">
+        <nav class="admin-nav">
+          <ul>
+            <li>
+              <a href="admin.html" >
+                <i class="fas fa-home"></i> Bosh sahifa
+              </a>
+            </li>
+            <li>
+              <a href="categories.html">
+                <i class="fas fa-list-alt"></i> Kategoriyalar
+              </a>
+            </li>
+            <li>
+              <a href="questions.html">
+                <i class="fas fa-question-circle"></i> Savollar
+              </a>
+            </li>
+            <li>
+              <a href="results.html" class="active">
+                <i class="fas fa-chart-bar"></i> Natijalar
+              </a>
+            </li>
+            <li>
+              <a href="#" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i> Chiqish
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+       
+    <div class="admin-container">
+           
+      <h2>O'quvchilar Test Natijalari</h2>
+
+           
+      <div class="form-card">
+               
+        <div
+          id="loading"
+          style="text-align: center; padding: 60px; color: #1e9cfd"
+        >
+                   
+          <i
+            class="fas fa-spinner fa-spin"
+            style="font-size: 3rem; margin-bottom: 20px"
+          ></i>
+                   
+          <p>Natijalar yuklanmoqda...</p>
+                 
+        </div>
+
+               
+        <div
+          id="no-results"
+          class="hidden"
+          style="text-align: center; padding: 80px; color: #777"
+        >
+                   
+          <i
+            class="fas fa-inbox"
+            style="font-size: 5rem; color: #bdc3c7; margin-bottom: 20px"
+          ></i>
+                   
+          <p>Hozircha hech kim test topshirmagan.</p>
+                 
+        </div>
+
+               
+        <div id="results-wrapper" class="hidden">
+                   
+          <table class="data-table">
+                       
+            <thead>
+                           
+              <tr>
+                               
+                <th>#</th>
+                               
+                <th>O'quvchi</th>
+                               
+                <th>Kategoriya</th>
+                               
+                <th>Natija</th>
+                               
+                <th>Sarflangan vaqt</th>
+                               
+                <th>Sana</th>
+                               
+                <th>Amallar</th>
+                           
+              </tr>
+                         
+            </thead>
+                       
+            <tbody id="resultsTableBody"></tbody>
+                     
+          </table>
+                 
+        </div>
+             
+      </div>
+         
+    </div>
+
+    <style>
+      .hidden {
+        display: none !important;
+      }
+    </style>
+
+       
+    <script src="./results.js"></script>
+     
+  </body>
+</html>
