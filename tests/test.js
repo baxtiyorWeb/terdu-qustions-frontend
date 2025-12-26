@@ -1,6 +1,6 @@
 // test.js – Avval Login, keyin Kategoriyalar
 document.addEventListener("DOMContentLoaded", () => {
-  const API_BASE_URL = "https://terdu-qustions-2t6dw6oan.vercel.app";
+  const API_BASE_URL = "https://terdu-qustions.onrender.com";
 
   // Elementlar
   const categoriesSection = document.getElementById("categories-section");

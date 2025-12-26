@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const loginSubmitBtn = document.getElementById("loginSubmitBtn");
 
   // Backend API manzili (NestJS default port 3000 da ishlaydi)
-  const API_BASE_URL = "https://terdu-qustions-2t6dw6oan.vercel.app";
+  const API_BASE_URL = "https://terdu-qustions.onrender.com";
   const LOGIN_ENDPOINT = "/auth/login";
 
   // --- Modalni boshqarish funksiyalari ---

@@ -1,7 +1,7 @@
 // results.js – FINAL VERSIYA: Loading abadiy emas, har doim natija chiqadi
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const API_BASE_URL = "https://terdu-qustions-2t6dw6oan.vercel.app";
+  const API_BASE_URL = "https://terdu-qustions.onrender.com";
   const token = localStorage.getItem("teacher_access_token");
 
   // Elementlar
