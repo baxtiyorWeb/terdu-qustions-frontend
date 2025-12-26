@@ -62,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ username, password }),
-        credentials: "include", // Cookie larni yuborish uchun
       });
 
       const data = await response.json();
